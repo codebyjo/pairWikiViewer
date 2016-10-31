@@ -8,6 +8,104 @@
 
 <style>
 
+	html {
+		font-family: Arial;
+	}
+	
+	.wrapper {
+		width: 100%;
+	}
+
+
+
+	.header {
+		width:100%;
+		height:100px;
+		/*background-color:#f2f2f2;*/
+		margin-bottom: 100px;
+
+	}
+
+	.right {
+		float: right;
+		margin-right: 20px;
+	}
+
+
+	.logo img {
+		display:block;
+		margin-top: 110px;
+		margin:auto;
+	}
+
+	.search {
+	    width:400px;
+	    height:28px;
+	    margin: auto;
+	    display:block;
+	    padding-top:10px;
+	}
+
+
+	#search1 {
+		width:400px;
+		 height:28px;
+		 margin: auto;
+		}
+
+	.searchButtons {
+		margin: auto;
+		display:block;
+		height: 22px;
+		width:250px;
+		margin: auto;
+		margin-top: 20px;
+	}
+
+
+	.button {
+		font-family:Arial;
+		font-size:11px;
+		font-weight:bold;
+		display:inline;
+		height:30px;
+		border:1px solid #dcdcdc;
+		background:#f2f2f2;
+		padding:  0 10px;
+	}
+
+	.footer {
+		bottom:0;
+		height:60px;
+		width:100%;
+		background-color:#f2f2f2;
+		clear:both;
+		display:block;
+		/*border-top: 1px solid #e4e4e4;*/
+		position: absolute;
+		}
+
+	.credit {
+		display: inline-block;
+	}
+
+	li {
+		font-size: 13px;
+
+	}
+
+	.credit a {
+		text-decoration:none;
+		color: #404040;
+		padding-left: 15px;
+	}
+	.credit a:hover {
+		text-decoration: underline;
+	}
+
+
+
+
 </style>
 
 <body>
@@ -15,7 +113,7 @@
 
 		<div class="header">
 			<ul>
-				<li>A Wikipedia Search Project for Free Code Camp</li>
+				<li class="credit right"><a href="https://www.freecodecamp.com/challenges/build-a-wikipedia-viewer">A Wikipedia Search Project for Free Code Camp</a></li>
 
 			</ul>
 
@@ -24,11 +122,11 @@
 		<div class="main">
 
 			<div class="logo">
-				<img src="Wikipedia-logo-wordmark.png" alt="wikipedia logo"/>
+				<a href="http://www.wikipedia.com"><img src="Wikipedia-logo-wordmark.png" alt="wikipedia logo"/></a>
 			<div>
 
 			<div class="search">
-				<input type="text" id="searchText"/>
+				<input type="text" id="search1"/>
 
 			</div>
 
@@ -44,20 +142,11 @@
 
 		<div class="footer">
 
-			<div class="leftFooter">
 				<ul>
-					<li class="credit">Made by:</div>
-					<li class="credit"><a href="https://www.freecodecamp.com/eagarcia8">Eduardo Garcia</a></li>
-					<li class="credit"> &amp; </li>
-					<li class="credit"><a href="https://www.freecodecamp.com/codebyjo">Joanne Dang</li>
+					<li class="credit left">Made by: <a href="https://www.freecodecamp.com/eagarcia8">Eduardo Garcia</a> &amp; <a href="https://www.freecodecamp.com/codebyjo">Joanne Dang</li>
+					<li class= "credit right"><a href="http://wwww.wikipedia.com">Data from Wikipedia</li>
 				</ul>
-			</div>
 
-			<div class="rightFooter">
-				<div class="credit">
-					Data from <a href="http://wwww.wikipedia.com">Wikipedia
-				</div>
-			</div>
 
 		</div>
 
