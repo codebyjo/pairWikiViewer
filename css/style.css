@@ -1,98 +1,96 @@
 	html {
-		font-family: Arial;
+	  font-family: Arial;
 	}
 	
 	.wrapper {
-		width: 100%;
+	  width: 100%;
 	}
-
-
-
+	
 	header {
-		width:100%;
-		height:100px;
-		/*background-color:#f2f2f2;*/
-		margin-bottom: 100px;
-
+	  width: 100%;
+	  height: 100px;
+	  /*background-color:#f2f2f2;*/
+	  margin-bottom: 60px;
 	}
-
+	
 	.left {
-		float: left;
-		margin-left: 20px;
+	  float: left;
+	  margin-left: 20px;
 	}
-
+	
 	.right {
-		float: right;
-		margin-right: 20px;
+	  float: right;
+	  margin-right: 20px;
 	}
-
-
+	
 	.logo img {
-		display:block;
-		margin-top: 110px;
-		margin:auto;
-	}
+	  display: block;
+	  margin: auto;
 
+	}
+	
 	.search {
-	    width:400px;
-	    height:28px;
-	    margin: auto;
-	    display:block;
-	    padding-top:10px;
+	  width: 492px;
+	  height: 41px;
+	  margin: auto;
+	  display: block;
+
 	}
-
-
+	
 	#searchBox {
-		width:400px;
-		 height:28px;
-		 margin: auto;
-		}
-
+    font-size: 16px;
+	  width: 478px;
+	  height: 35px;
+	  margin: auto;
+    padding-left: 9px;
+	}
+	
 	.searchButtons {
-		margin: auto;
-		display:block;
-		height: 22px;
-		width:250px;
-		margin: auto;
-		margin-top: 20px;
+	  margin: auto;
+	  display: block;
+	  height: 36px;
+	  width: 285px;
+	  margin: auto;
+	  margin-top: 20px;
 	}
-
-
+	
 	.button {
-		font-family:Arial;
-		font-size:11px;
-		font-weight:bold;
-		display:inline;
-		height:30px;
-		border:1px solid #dcdcdc;
-		background:#f2f2f2;
-		padding:  0 10px;
+	  font-family: Arial;
+	  font-size: 13px;
+	  font-weight: bold;
+    color: rgb(117, 117, 117);
+	  display: inline;
+    width: 140px;
+	  height: 36px;
+	  border: none;
+	  background: #f2f2f2;
+	  padding: 0 10px;
 	}
-
+	
 	footer {
-		bottom:0;
-		height:60px;
-		width:100%;
-		/*background-color:#f2f2f2;*/
-		clear:both;
-		display:block;
-		/*border-top: 1px solid #e4e4e4;*/
-		position: absolute;
-		}
-
+	  bottom: 0;
+	  height: 60px;
+	  width: 100%;
+	  /*background-color:#f2f2f2;*/
+	  clear: both;
+	  display: block;
+	  /*border-top: 1px solid #e4e4e4;*/
+	  position: absolute;
+	}
+	
 	.credit {
-		display: inline-block;
+	  display: inline-block;
 	}
-
+	
 	li {
-		font-size: 13px;
-
+	  font-size: 13px;
 	}
-
+	
 	.credit a {
-		text-decoration:none;
-		color: #404040;
+	  text-decoration: none;
+	  color: #404040;
 	}
+	
 	.credit a:hover {
-		text-decoration: underline;
+	  text-decoration: underline;
 	}
