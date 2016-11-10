@@ -1,59 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
 <head>
-    <meta charset="UTF-8" />
-    <title>Wiki Viewer</title>
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <title>pairWikiViewer brought to you by Jo &amp; Ed, and Wikipedia!</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/app.js"></script>
 </head>
 
-
 <body>
-	<div class="wrapper">
 
-		<div class="header">
+	<div class="wrapper">
+	
+		<header>
 			<ul>
 				<li class="credit right"><a href="https://www.freecodecamp.com/challenges/build-a-wikipedia-viewer">A Wikipedia Search Project for Free Code Camp</a></li>
-
 			</ul>
+		</header>
 
-		</div>
-
-		<div class="main">
+		<article>
 
 			<div class="logo">
-				<a href="http://www.wikipedia.com"><img src="Wikipedia-logo-wordmark.png" alt="wikipedia logo"/></a>
-			<div>
+				<a href="http://www.wikipedia.com"><img src="images/Wikipedia-logo-wordmark.png" alt="Wikipedia Logo"/></a>
+			</div>
 
 			<div class="search">
-				<input type="text" id="search1"/>
-
+				<input type="text" id="searchBox" />
 			</div>
 
 			<div class="searchButtons">
 				<input class="button" id="normalSearch" value="Wikipedia Search" type="submit"/>
 				<input class="button" id="luckySearch" value="I'm Feeling Lucky" type="submit"/>
-
 			</div>
+		  
+    </article>
 
-
-
-		</div>
-
-		<div class="footer">
-
-				<ul>
-					<li class="credit left">Made by: <a href="https://www.freecodecamp.com/eagarcia8">Eduardo Garcia</a> &amp; <a href="https://www.freecodecamp.com/codebyjo">Joanne Dang</li>
-					<li class= "credit right"><a href="http://wwww.wikipedia.com">Data from Wikipedia</li>
-				</ul>
-
-
-		</div>
-
-	</div>
-
-	<script src="app.js"></script>
-
+    <footer>
+		  <ul>
+        <li class="credit left">Made by: <a href="https://www.freecodecamp.com/eagarcia8">Eduardo Garcia</a> &amp; <a href="https://www.freecodecamp.com/codebyjo">Joanne Dang</a></li>
+        <li class= "credit right"><a href="http://wwww.wikipedia.com">Data from Wikipedia</a></li>
+		  </ul>
+		</footer>
+            
+  </div>
 
 </body>
 </html>
