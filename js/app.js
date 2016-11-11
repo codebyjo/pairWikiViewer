@@ -1,8 +1,8 @@
 $("document").ready(function() {
-  
+
   valid = new RegExp(/[a-zA-Z0-9]/g);
   resultsArray = [];
-  
+
   $(".button").hover(function() {
     $(this).css({
       "color": "#000000",
@@ -16,16 +16,17 @@ $("document").ready(function() {
       "box-shadow": "none"
     });
   });
-  
+
   // Search Wikipedia.
   function searchArticle(searchQuery) {
     //Clear current content
-    
+
+
     //Makes sure that the search box has at least 1 character or 1 number, otherwise open a random page.
     if (valid.test(searchQuery) == false) {
       $("#searchBox").attr("placeholder", "Type something in you noob!");
     }else{
-    
+
 	    var searchUrl = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=" + searchQuery + "&utf8=";
 
       // Request list of possible articles.
@@ -34,25 +35,36 @@ $("document").ready(function() {
         dataType: "jsonp",
         success: function(results) {
           resultsArray = results.query.search;
+          console.log(results.query.search);
 	      }
       });
     }
-    
-	//pull title and first paragraph of search object
 
+	//pull title and first paragraph of search object
+  //var title = callback.query.search[m].title;
+  //var url = title.replace(/ /g, " ");
+
+  //$ (".title")
 	//allow for certain number of searches to display
   }
-  
+
   //type in the search box, I can see a dropdown menu with autocomplete options for matching Wikipedia entries-->
-  
+
+  // Normal Search enter/return function
+  $("#searchBox").keypress(function (e) {
+    if(e.which == 13) {
+      searchArticle($("#searchBox").val());
+    }
+  });
+
   // Normal Search button function
   $("#normalSearch").on("click", function(event) {
     searchArticle($("#searchBox").val());
 	});
-  
+
   // Lucky Search button function
   $("#luckySearch").on("click", function(event) {
     window.open("https://en.wikipedia.org/wiki/Special:Random", '_blank');
   });
-  
+
 });
