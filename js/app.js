@@ -2,7 +2,20 @@ $("document").ready(function() {
 
   valid = new RegExp(/[a-zA-Z0-9]/g);
   resultsArray = [];
-
+  secondPageHeader = '\
+    <div style="background-color: rgb(241, 241, 241); width: 100%; height: 60px; margin: 0; padding: 0;">\
+      <img src="images/Wikipedia-logo-wordmark.png" alt="Wikipedia Logo" style="height: 58px;" />\
+      <input type="text" id="searchBox" style="margin: 0; position: relative; top: -23px;"/>\
+      <button id="normalSearch" class="loaded-search" type="submit" style="background-color: rgb( 66, 133, 244); position: relative; top: -23px; left: -5px; height: 41px; width: 41px; font-family: \'Times New Roman\', serif; font-size: 1.25em; color: white; border: none;"><i class="fa fa-search" aria-hidden="true"></i></button>\
+    </div>\
+    <div style="border-bottom: 1px solid rgb(235, 235, 235); height: 60px; padding-left: 200px;">\
+		  <ul>\
+		    <li style="width: 30px; font-size: 13px; font-weight: 600; height: 58px; text-align: center; border-bottom: 3px solid rgb(66, 133, 244); color: rgb(66, 133, 244); line-height: 60px; vertical-align: middle;">All</li>\
+		  </ul>\
+		</div>\
+    '; 
+  secondPageArticle = '';
+    
   $(".button").hover(function() {
     $(this).css({
       "color": "#000000",
@@ -20,7 +33,32 @@ $("document").ready(function() {
   // Search Wikipedia.
   function searchArticle(searchQuery) {
     //Clear current content
+    $("header").empty();
+    $("article").empty();
+    $("header").html(secondPageHeader);
+    
+    // Disconnected listener, so have to relisten.
+    $("#searchBox").keypress(function (e) {
+    if(e.which == 13) {
+      searchArticle($("#searchBox").val());
+      }
+    });
+    
+    $("#normalSearch").hover(function() {
+    $(this).css({
+      "background-color": "rgb(59, 120, 231)",
+    });
+  }, function() {
+    $(this).css({
+      "background-color": "rgb(66, 133, 244)",
 
+    });
+  });
+
+    // Normal Search button function
+    $("#normalSearch").on("click", function(event) {
+      searchArticle($("#searchBox").val());
+	  });
 
     //Makes sure that the search box has at least 1 character or 1 number, otherwise open a random page.
     if (valid.test(searchQuery) == false) {
