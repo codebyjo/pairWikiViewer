@@ -87,6 +87,26 @@ $("document").ready(function() {
   }
 
   //type in the search box, I can see a dropdown menu with autocomplete options for matching Wikipedia entries-->
+$("#searchBox").autocomplete({
+    source: function(request, response) {
+        console.log(request.term);
+        $.ajax({
+            url: "http://en.wikipedia.org/w/api.php",
+            dataType: "jsonp",
+            data: {
+                'action': "opensearch",
+                'format': "json",
+                'search': request.term
+            },
+            success: function(data) {
+                response(data[1]);
+            }
+        });
+
+    }
+});
+
+
 
   // Normal Search enter/return function
   $("#searchBox").keypress(function (e) {
