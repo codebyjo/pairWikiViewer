@@ -102,9 +102,10 @@ $("#searchBox").autocomplete({
                 response(data[1]);
             }
         });
-
     }
-});
+}); 
+
+
 
 
 

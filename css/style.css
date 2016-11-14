@@ -95,16 +95,6 @@
 	  text-decoration: underline;
 	}
 
-	#search input {
-		background: none repeat scroll 0 0 #fff;
-		border: 0 none;
-		color: #7F7F7F;
-		float: left;
-		font: 12px 'Helvetica','Lucida Sans Unicode','Lucida Grande',sans-serif;
-		height: 20px;
-		margin: 0;
-		padding: 10px;
-		transition: background 0.3s ease-in-out 0s;
-		width: 300px;
+	.ui-menu-item-wrapper {
+		background: white;
 	}
-	

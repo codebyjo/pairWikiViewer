@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset200802.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!--<link rel="stylesheet" href="css/jquery-ui.css" />-->
 </head>
 
 <body>
@@ -26,7 +27,7 @@
 			</div>
 
 			<div class="search">
-				<input type="text" id="searchBox"/>
+				<input type="text" id="searchBox" onblur="if(this.value == '') { this.value = 'Type here..'; }" onfocus="if(this.value == 'Type here..') { this.value = ''; }" name="s"/>
 			</div>
 
 			<div class="searchButtons">
@@ -34,6 +35,7 @@
 				<input class="button" id="luckySearch" value="I'm Feeling Lucky" type="submit"/>
 			</div>
 		  
+
     </article>
 
     <footer>
@@ -47,6 +49,7 @@
 
    <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="css/jquery-ui.css" />
   <script src="js/app.js"></script>
 
 </body>
