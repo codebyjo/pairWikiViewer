@@ -13,9 +13,11 @@ $("document").ready(function() {
 		    <li style="width: 30px; font-size: 13px; font-weight: 600; height: 58px; text-align: center; border-bottom: 3px solid rgb(66, 133, 244); color: rgb(66, 133, 244); line-height: 60px; vertical-align: middle;">All</li>\
 		  </ul>\
 		</div>\
-    '; 
-  secondPageArticle = '';
-    
+    ';
+  secondPageArticle = '\
+  <div>snippet</div>\
+  ';
+
   $(".button").hover(function() {
     $(this).css({
       "color": "#000000",
@@ -32,28 +34,6 @@ $("document").ready(function() {
 
   // Search Wikipedia.
   function searchArticle(searchQuery) {
-    //Clear current content
-    $("header").empty();
-    $("article").empty();
-    $("header").html(secondPageHeader);
-    
-    // Disconnected listener, so have to relisten.
-    $("#searchBox").keypress(function (e) {
-    if(e.which == 13) {
-      searchArticle($("#searchBox").val());
-      }
-    });
-    
-    $("#normalSearch").hover(function() {
-    $(this).css({
-      "background-color": "rgb(59, 120, 231)",
-    });
-  }, function() {
-    $(this).css({
-      "background-color": "rgb(66, 133, 244)",
-
-    });
-  });
 
     // Normal Search button function
     $("#normalSearch").on("click", function(event) {
@@ -76,6 +56,24 @@ $("document").ready(function() {
           console.log(results.query.search);
 	      }
       });
+
+      $("header").empty();
+      $("article").empty();
+      $("header").html(secondPageHeader);
+      $("article").html(); // HTML results go here (referenced by variable)
+
+      // Disconnected listener, so have to relisten.
+      $("#searchBox").keypress(function (e) {
+        if(e.which == 13) {searchArticle($("#searchBox").val());}
+      });
+
+      $("#normalSearch").hover(function() {
+        $(this).css({"background-color": "rgb(59, 120, 231)",});
+      }, function() {
+        $(this).css({"background-color": "rgb(66, 133, 244)"});
+      });
+
+
     }
 
 	//pull title and first paragraph of search object
@@ -103,7 +101,7 @@ $("#searchBox").autocomplete({
             }
         });
     }
-}); 
+});
 
 
 
