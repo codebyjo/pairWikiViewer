@@ -73,7 +73,7 @@ $("document").ready(function() {
         $(this).css({"background-color": "rgb(66, 133, 244)"});
       });
 
-
+      $("#searchBox").attr("value", searchQuery);
     }
 
 	//pull title and first paragraph of search object
