@@ -97,7 +97,8 @@ $("#searchBox").autocomplete({
                 'search': request.term
             },
             success: function(data) {
-                response(data[1]);
+              console.log(data);
+              response(data[1]);
             }
         });
     }
