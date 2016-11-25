@@ -5,7 +5,7 @@ $("document").ready(function() {
   var resultsHTML = function(arrayInput){
     var htmlOutput = '';
     for (var i=0; i<arrayInput.length; i++){
-      htmlOutput += '<div>' + arrayInput[i].title + '</div>';
+      htmlOutput += '<div>' + arrayInput[i].title + arrayInput[i].snippet + '</div>';
     }
     return htmlOutput;
 
