@@ -5,7 +5,7 @@ $("document").ready(function() {
   var resultsHTML = function(arrayInput){
     var htmlOutput = '';
     for (var i=0; i<arrayInput.length; i++){
-      htmlOutput += '<div style="width: 80%; margin: 0 auto;"><div style="width: 100%; padding: 10px;"><a href="https://en.wikipedia.org/wiki/' + arrayInput[i].title + '"target="_blank"><h3>' + arrayInput[i].title + '</h3><p>' + arrayInput[i].snippet + '</p></a></div></div>';
+      htmlOutput += '<div style="width: 80%; margin: 0 auto; background: solid; background-color: white;"><div style="width: 100%; padding: 10px; font-size: 13px;"><a href="https://en.wikipedia.org/wiki/' + arrayInput[i].title + '"target="_blank"><h3>' + arrayInput[i].title + '</h3><p>' + arrayInput[i].snippet + '</p></a></div></div>';
     }
 
     return htmlOutput;
