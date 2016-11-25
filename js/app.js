@@ -5,8 +5,9 @@ $("document").ready(function() {
   var resultsHTML = function(arrayInput){
     var htmlOutput = '';
     for (var i=0; i<arrayInput.length; i++){
-      htmlOutput += '<div>' + arrayInput[i].title + arrayInput[i].snippet + '</div>';
+      htmlOutput += '<div style="width: 100%; margin: 0 auto; background-color: #ff00ff;"><a href="https://en.wikipedia.org/wiki/' + arrayInput[i].title + '"target="_blank"><h3>' + arrayInput[i].title + '</h3><p>' + arrayInput[i].snippet + '</p></a></foundArticles>';
     }
+
     return htmlOutput;
 
   };
@@ -22,7 +23,10 @@ $("document").ready(function() {
       </ul>\
     </div>\
     ';
-  secondPageArticle = '<div>snippet</div>';
+  secondPageArticle = '\
+    <div>\
+    </div>\
+    ';
 
   $(".button").hover(function() {
     $(this).css({

@@ -12,6 +12,11 @@
 	  /*background-color:#f2f2f2;*/
 	  margin-bottom: 60px;
 	}
+
+	.foundArticles {
+		width:80;
+		border-color: #ff00ff;
+	}
 	
 	.left {
 	  float: left;
@@ -96,16 +101,16 @@
 	  text-decoration: none;
 	}
 
-#ui-id-1 {
-  font-family: 'Arial', sans-serif;
-  background-color: white;
-}
+	#ui-id-1 {
+  	font-family: 'Arial', sans-serif;
+  	background-color: white;
+	}
 
-#ui-id-1 li {
-  margin: 5px;
-  font-size: 16px;
-  font-family: Arial;
-}
+	#ui-id-1 li {
+  	margin: 5px;
+  	font-size: 16px;
+  	font-family: Arial;
+	}
 
 	.ui-menu-item-wrapper {
 		background: white;
