@@ -23,15 +23,14 @@ $("document").ready(function() {
         </div>';
     }
 
-    return htmlOutput;
-
+    return htmlOutput
   };
   
   secondPageHeader = '\
     <div style="background-color: rgb(241, 241, 241); width: 100%; height: 60px; margin: 0; padding: 0;">\
       <a href="."><img src="images/Wikipedia-logo-wordmark.png" alt="Wikipedia Logo" style="height: 58px;" /></a>\
       <input type="text" id="searchBox" style="margin: 0; position: relative; top: -23px;"/>\
-      <button id="normalSearch" class="loaded-search" type="submit" style="background-color: rgb( 66, 133, 244); position: relative; top: -23px; left: -5px; height: 41px; width: 41px; font-family: \'Times New Roman\', serif; font-size: 1.25em; color: white; border: none;"><i class="fa fa-search" aria-hidden="true"></i></button>\
+      <button id="normalSearch" type="submit" style="background-color: rgb( 66, 133, 244); position: relative; top: -23px; left: -5px; height: 41px; width: 41px; font-family: \'Times New Roman\', serif; font-size: 1.25em; color: white; border: none;"><i class="fa fa-search" aria-hidden="true"></i></button>\
     </div>\
     <div style="border-bottom: 1px solid rgb(235, 235, 235); height: 60px; padding-left: 200px;">\
       <ul>\
